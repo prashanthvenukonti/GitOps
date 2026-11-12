@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gitops-node-app
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: gitops-node-app
+  template:
+    metadata:
+      labels:
+        app: gitops-node-app
+    spec:
+      containers:
+        - name: node-app
+          image: YOUR_DOCKERHUB_USERNAME/gitops-node-app:v1
+          imagePullPolicy: IfNotPresent
+          ports:
+            - name: http
+              containerPort: 3000
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: 3000
+            initialDelaySeconds: 5
+            periodSeconds: 10
