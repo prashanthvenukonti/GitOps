@@ -9,7 +9,7 @@ spec:
   project: default
 
   source:
-    repoURL: https://github.com/OWNER/REPOSITORY.git
+    repoURL: https://github.com/prashanthvenukonti/GitOps.git
     targetRevision: main
     path: k8s
 

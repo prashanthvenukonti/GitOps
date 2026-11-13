@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: node-app
-          image: YOUR_DOCKERHUB_USERNAME/gitops-node-app:v1
+          image: prashanthvk998/gitops-node-app:v1
           imagePullPolicy: IfNotPresent
           ports:
             - name: http
