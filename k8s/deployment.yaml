@@ -4,7 +4,7 @@ metadata:
   name: gitops-node-app
   namespace: default
 spec:
-  replicas: 5
+  replicas: 10
   selector:
     matchLabels:
       app: gitops-node-app
@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: node-app
-          image: prashanthvk998/gitops-node-app:v1
+          image: prashanthvk998/gitops-node-app:v2
           imagePullPolicy: IfNotPresent
           ports:
             - name: http
