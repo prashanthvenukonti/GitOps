@@ -4,7 +4,7 @@ metadata:
   name: gitops-node-app
   namespace: default
 spec:
-  replicas: 1
+  replicas: 5
   selector:
     matchLabels:
       app: gitops-node-app
